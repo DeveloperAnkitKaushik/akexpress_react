@@ -1,0 +1,168 @@
+.innercontainer {
+    padding-top: 7rem;
+}
+
+.herocontent {
+    display: flex;
+    align-items: center;
+}
+
+.herocontent h1 {
+    width: 70%;
+    font-size: 4.5rem;
+    font-weight: 500;
+}
+
+.herocontent p {
+    width: 30%;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.highlight {
+    color: var(--primary);
+}
+
+.downcontainer {
+    margin-top: 15rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trackcontainer {
+    position: absolute;
+    top: -6rem;
+    background-color: var(--primary);
+    padding: 2rem 7rem;
+    border-radius: 20px;
+    border: 10px solid white;
+    color: white;
+    border-radius: 20px;
+}
+
+.bg {
+    background: url(/homebg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 40rem;
+}
+
+.trackheading {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.inputcontainer {
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    gap: 2px;
+}
+
+.input {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    width: 23rem;
+    border: none;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.input:focus,
+.input:active {
+    outline: none;
+}
+
+.trackcontainer h1 {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.inputcontainer button {
+    padding: 0 2rem;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 0.9rem;
+    background-color: white;
+    border: none;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.inputcontainer button:hover {
+    background-color: rgb(38, 30, 48);
+    color: white;
+}
+
+.shipmentDetails {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.shipmentDetails p {
+    margin: 0.5rem 0;
+}
+
+@media(max-width: 1024px) {
+    .herocontent h1 {
+        width: 70%;
+        font-size: 3rem;
+        font-weight: 500;
+    }
+
+    .herocontent p {
+        width: 30%;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+}
+@media(max-width: 760px) {
+    .trackcontainer {
+        padding: 2rem 2rem;
+    }
+    .inputcontainer{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .input{
+        border-radius: 7px;
+        width: 17rem;
+    }
+    .inputcontainer button {
+        border-radius: 7px;
+        padding: 0.5rem 0;
+    }
+    .trackheading {
+        font-size: 1.5rem;
+    }
+}
+@media(max-width: 624px) {
+    .herocontent{
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    .herocontent h1 {
+        width: 100%;
+        font-size: 3rem;
+        font-weight: 500;
+    }
+
+    .herocontent p {
+        width: 100%;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+}

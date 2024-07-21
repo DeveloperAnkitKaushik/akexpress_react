@@ -1,0 +1,99 @@
+.container {
+    margin-top: 7rem;
+    height: 83.9vh;
+}
+
+.innercontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading {
+    position: relative;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--heading);
+}
+
+.left,
+.right {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+}
+
+.left {
+    top: 0.3rem;
+    left: -2.5rem;
+}
+
+.right {
+    top: 0.3rem;
+    right: -2.5rem;
+}
+
+.inputcontainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.first {
+    display: flex;
+    gap: 3rem;
+}
+
+.first input {
+    border: none;
+    width: 33.3%;
+    background-color: rgb(238, 238, 238);
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.inputcontainer input {
+    margin-top: 1rem;
+    border: none;
+    background-color: rgb(238, 238, 238);
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.innercontainer button {
+    background-color: var(--primary);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.7rem 3rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+@media(max-width: 600px) {
+    .first {
+        flex-direction: column;
+        gap: 0rem;
+    }
+
+    .first input {
+        width: 100%;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+    .left,
+    .right {
+        position: absolute;
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+}

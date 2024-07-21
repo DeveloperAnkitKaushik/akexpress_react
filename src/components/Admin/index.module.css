@@ -1,0 +1,52 @@
+/* index.module.css */
+
+.container {
+    padding: 20px;
+  }
+  
+  .innercontainer {
+    padding-top: 7rem;
+  }
+  
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .listcontainer {
+    margin-top: 2rem;
+  }
+  
+  .contentTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .contentTable th, .contentTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .contentTable th {
+    background-color: #f4f4f4;
+    text-align: left;
+  }
+  
+  button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  button:hover {
+    background-color: rgb(232, 232, 232);
+  }
+  

@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "DM Sans", sans-serif;
+  scrollbar-width: thin;
+}
+
+body{
+  position: relative;
+}
+
+:root{
+  --primary: #BE1C2D;
+  --heading: rgb(21, 21, 30);
+  --para: rgb(89, 89, 89);
+}
+
+.text-gradient {
+  background: linear-gradient(79deg, #2b0aff, #ff5b8a 49%, #ff5b8a 55%, #fba64b 77%, #f99b52);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+.maincontainer {
+  width: 100%;
+  max-width: 1536px;
+  margin: 0 auto;
+  padding: 1rem 5%;
+}
+
+@media(max-width: 1536px) {
+  .maincontainer {
+    max-width: 1366px;
+  }
+}
+
+@media(max-width: 1366px) {
+  .maincontainer {
+    max-width: 1280px;
+  }
+}
+
+@media(max-width: 1280px) {
+  .maincontainer {
+    max-width: 1024px;
+  }
+}
+
+@media(max-width: 1024px) {
+  .maincontainer {
+    max-width: 768px;
+  }
+}
+
+@media(max-width: 768px) {
+  .maincontainer {
+    max-width: 638px;
+  }
+}
+
+.spacing{
+  margin-top: 4rem;
+}
+
+.footercontainer{
+  padding: 0.7rem;
+  text-align: center;
+  background-color: rgb(26, 30, 37);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footercontainer h1{
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+input:focus,
+input:active{
+    outline: none;
+}
