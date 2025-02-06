@@ -1,15 +1,27 @@
 import { auth, googleProvider } from '../../firebaseConfig';
 import { signInWithPopup } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import styles from "./index.module.css";
 
 const Login = () => {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    // Check if the user is already logged in
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        navigate('/'); // Redirect to home page if logged in
+      }
+    });
+
+    return () => unsubscribe(); // Cleanup listener
+  }, [navigate]);
+
   const handleGoogleSignIn = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
-      navigate('/');
+      navigate('/'); // Redirect to home page after successful login
     } catch (error) {
       console.error("Error during Google sign-in:", error);
     }

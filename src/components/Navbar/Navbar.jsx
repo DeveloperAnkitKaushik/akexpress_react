@@ -4,6 +4,7 @@ import styles from "./index.module.css";
 import { MdOutlineStackedLineChart } from "react-icons/md";
 import { GiCrossedBones } from "react-icons/gi";
 import { auth } from '../../firebaseConfig';
+import toast from 'react-hot-toast';
 
 const Navbar = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -44,13 +45,17 @@ const Navbar = () => {
                         className={`${styles.links} ${isMenuOpen ? `${styles.menuOpen} ${styles.animationOpen}` : ""
                             }`}
                     >
-                        <Link to="/new-shipment" className={styles.link}>New Shipment</Link>
-                        <Link to="/shipments" className={styles.link}>Shipments</Link>
-                        {isAdmin && <Link to="/admin" className={styles.link}>Admin Panel</Link>}
+                        <Link to="/new-shipment" className={styles.link} onClick={() => toggleMenu()}>New Shipment</Link>
+                        <Link to="/shipments" className={styles.link} onClick={() => toggleMenu()}>Shipments</Link>
+                        {isAdmin && <Link to="/admin" className={styles.link} onClick={() => toggleMenu()}>Admin Panel</Link>}
                         {user ? (
-                            <Link onClick={() => auth.signOut()} className={styles.link}>Logout</Link>
+                            <Link onClick={() => {
+                                auth.signOut();
+                                toggleMenu();
+                                toast.success("Logout Successfully!")
+                            }} className={styles.link} >Logout</Link>
                         ) : (
-                            <Link to="/login" className={styles.link}>Login</Link>
+                            <Link to="/login" className={styles.link} onClick={() => toggleMenu()} >Login</Link>
                         )}
                     </nav>
                 </div>

@@ -70,9 +70,9 @@ function App() {
           }
         />
       </Routes>
-      {user && (
+      {/* {user && (
         <Footer />
-      )}
+      )} */}
     </div>
   );
 }

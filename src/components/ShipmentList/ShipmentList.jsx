@@ -29,30 +29,32 @@ const ShipmentList = () => {
             <img src="/right.png" alt="" className={styles.right} />
           </div>
           <div className={styles.listcontainer}>
-            <table className={styles.contentTable}>
-              <thead>
-                <tr>
-                  <th>Tracking Code</th>
-                  <th>Sender</th>
-                  <th>Receiver</th>
-                  <th>Package Size</th>
-                  <th>Delivery Address</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {shipments.map((shipment) => (
-                  <tr key={shipment.id}>
-                    <td>{shipment.trackingCode}</td>
-                    <td>{shipment.sender}</td>
-                    <td>{shipment.receiver}</td>
-                    <td>{shipment.packageSize}</td>
-                    <td>{shipment.deliveryAddress}</td>
-                    <td>{shipment.status}</td>
+            <div className={styles.tableContainer}>
+              <table className={styles.contentTable}>
+                <thead>
+                  <tr>
+                    <th>Tracking Code</th>
+                    <th>Sender</th>
+                    <th>Receiver</th>
+                    <th>Package Size</th>
+                    <th>Delivery Address</th>
+                    <th>Status</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {shipments.map((shipment) => (
+                    <tr key={shipment.id}>
+                      <td>{shipment.trackingCode}</td>
+                      <td>{shipment.sender}</td>
+                      <td>{shipment.receiver}</td>
+                      <td>{shipment.packageSize}</td>
+                      <td>{shipment.deliveryAddress}</td>
+                      <td>{shipment.status}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

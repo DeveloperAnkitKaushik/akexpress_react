@@ -56,9 +56,15 @@
     display: none;
 }
 
+.hamburger,
+.cross {
+    display: none;
+}
 
-@media(max-width: 650px) {
-    .hamburger {
+
+@media(max-width: 780px) {
+    .hamburger,
+    .cross {
         display: block;
     }
 
@@ -94,5 +100,11 @@
         background-image: none;
         color: rgb(70, 70, 70);
         box-shadow: none;
+    }
+}
+
+@media(max-width: 1024px) {
+    .link{
+        padding: 0.5rem 1rem;
     }
 }

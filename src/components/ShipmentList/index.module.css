@@ -39,7 +39,7 @@
         justify-content: center;
         margin-top: 4rem;
     }
-    
+
     .contentTable {
         border-collapse: collapse;
         font-size: 0.9em;
@@ -77,3 +77,10 @@
         font-weight: bold;
         color: #009879;
     }
+
+    .tableContainer {
+        overflow-x: auto;
+        /* Enable horizontal scrolling */
+    }
+
+    
